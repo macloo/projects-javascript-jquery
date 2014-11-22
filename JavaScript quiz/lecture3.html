@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript Section 2 Lecture 3</title>
+
+<script>
+
+// alert("Hello, World!");
+
+var firstName = "Jasmine";
+var lastName = "Flowers";
+
+// alert("Hello, my name is " + firstName + " " + lastName);
+
+if (firstName == "Stephanie") {
+	alert("Yes, I am Stephanie.");
+} else if (firstName == "Kaylee") {
+	alert("Yes, I am Kaylee.");
+} else {
+	alert("No, I am not Stephanie or Kaylee.");
+}
+
+var cars = new Array();
+cars[0] = 'Honda';
+cars[1] = 'Ford';
+cars[2] = 'BMW';
+
+// alternative to set up a new array
+
+var bicycles = ['Trek', 'Bianchi', 'Cannondale'];
+
+console.log("The first item in cars is " + cars[0]);
+console.log("The first item in bicycles is " + bicycles[0]);
+
+// for loop introduced
+
+for (var i = 0; i < 5; i++) {
+	console.log(i);
+}
+
+for (var i = 0; i < cars.length; i++) {
+	console.log(cars[i]);
+}
+
+function sayIt(word) {
+	console.log(word);
+}
+
+sayIt("Awesome!");
+
+function addIt(num1, num2) {
+	console.log(num1 + num2);
+}
+
+addIt(27, 3);
+
+
+</script>
+</head>
+
+<body>
+
+<h1>JavaScript Section 2 Lecture 3</h1>
+
+<ol>
+<li>alert()</li>
+<li>variables (var keyword)</li>
+<li>if-else if-else</li>
+<li>arrays</li>
+<li>for loop</li>
+<li>functions</li>
+</ol>
+
+<p>Make sure you've opened View &gt; Developer &gt; JavaScript Console in Chrome.</p>
+
+</body>
+</html>

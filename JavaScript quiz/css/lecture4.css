@@ -1,0 +1,72 @@
+body {
+	margin: 20px auto;
+	padding: 0;
+ 	background: #2A7510;
+	color: #000;
+ 	font-family: Verdana, sans-serif;
+	font-size: 100%;
+	line-height: 1.5em;
+	}
+
+#wrapper {
+	background: #B2E3A1;
+	width: 900px;
+	margin: 0 auto;
+	}
+
+header {
+	text-align: center;
+	border-bottom: dashed 1px #fff;
+	padding-top: 20px;
+}
+
+#results p {
+	background: #fff;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+section {
+	padding: 10%;
+	padding-top: 0;
+}
+
+h1 {
+	font: normal 4em/1em Georgia, serif;
+ 	margin: 10px 0;
+}
+
+header p {
+	font-size: 130%;
+}
+
+.question {
+	font-size: 120%;
+	font-weight: bold;
+}
+
+/* Submit Answers button */
+
+input[type='submit'] {
+ 	background: #2A7510;
+ 	color: #fff;
+ 	font-weight: bold;
+ 	font-size: 150%;
+ 	border: 0;
+ 	padding: 10px 15px;
+ 	cursor: pointer;
+}
+
+input[type='submit']:hover {
+ 	background: #3AA116;
+}
+
+input[type='submit']:focus {
+ 	outline: none;
+}
+
+/* add some space to right of each radio button */
+
+input[type='radio'] {
+	margin-right: 10px;
+}
