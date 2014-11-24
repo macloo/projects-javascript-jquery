@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>YouTube Search Engine</title>
+<link rel="stylesheet" href="css/lecture12.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css" media="screen">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+<script src="scripts/jquery.fancybox.pack.js"></script>
+<script src="scripts/lecture12.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.fancybox').fancybox();
+	});
+</script>
+<!-- fancybox JS and CSS files, plus 3 GIFs/PNGs in my CSS folder 
+     Plus 2 classes inserted into the a href - see getOutput() function 
+     in my JS file, where it writes the HTML for YouTube items 
+     https://github.com/fancyapps/fancyBox  -->
+</head>
+
+<body>
+<div id="container">
+
+<header>
+<h1>YouTube Search Engine</h1>
+<p>Search for videos from YouTube and play them here!</p>
+</header>
+
+<section>
+<form id="search-form" name="search-form" onsubmit="return search('','')">
+<!-- NOTE: I'm passing in empty values because the paging buttons use 
+     the same function in my JS. This is different from the tutorial. -->
+	<div class="fieldcontainer">
+		<input type="search" id="query" class="searchfield" placeholder="Search YouTube"> 
+		<input type="submit" name="searchbutton" id="searchbutton" value="">
+		<!-- button has no text (value) because it is an image, via CSS -->
+	</div>
+</form>
+
+<!-- YouTube search results will be displayed here -->
+<ul id="results"></ul>
+
+<!-- Prev and Next buttons will be displayed here after a search runs -->
+<div id="buttons"></div>
+
+<footer>
+<p>This app accesses the YouTube API to search and display videos, from <a href="https://www.udemy.com/projects-in-javascript-jquery#/lecture/1787910" target="_blank">an exercise at Udemy</a>. I made many changes to the JS file. Video viewer by <a href="https://github.com/fancyapps/fancyBox"target="_blank">fancyBox</a>.</p>
+</footer>
+</section>
+
+</div>
+</body>
+</html>

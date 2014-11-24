@@ -1,0 +1,63 @@
+Lectures 12-16
+https://www.udemy.com/projects-in-javascript-jquery#/lecture/1787910
+-------------------------------------------------------------------------------
+
+https://console.developers.google.com/project/genuine-period-772/apiui/credential
+
+My API key: 
+
+[redacted]
+
+To get a key:
+
+1. Go to Google Developers
+
+2. Console
+   https://console.developers.google.com/project
+
+3. YouTube Data API v3
+
+4. APIs and Auth
+
+5. Credentials
+
+6. Create new Key
+
+7. Browser Key (because we will run it in a browser page)
+
+"ACCEPT REQUESTS FROM THESE HTTP REFERERS (WEB SITES)"
+(Leave blank to accept all; can edit this later)
+
+Find my credentials (key):
+https://console.developers.google.com/project/[redacted]
+
+-------------------------------------------------------------------------------
+YouTube Data API (v3)
+-------------------------------------------------------------------------------
+
+https://developers.google.com/youtube/v3/
+
+"You can use the API to fetch search results and to retrieve, insert, update, and delete resources like videos or playlists."
+
+Go to APIs & auth (left side) > APIs (then Browse APIs, scroll down to find YouTube Data API and change status to "On")
+
+API Reference:
+https://developers.google.com/youtube/v3/docs/
+Find "Resource Types" here
+Click "Search"
+Click "list" (it is the only method given for Search)
+
+https://developers.google.com/youtube/v3/docs/search/list
+
+Provides a GET request for our form, and a list of all parameters we can include. (So cool!) E.g. you can limit it to one channel, and so on. 
+A "snippet" is all the summary stuff about a video: title, short description, thumbnail.
+
+	"in a search result, the snippet property contains other properties that 
+	identify the result's title, description, and so forth. If you set 
+	part=snippet, the API response will also contain all of those nested 
+	properties. (string)"
+
+q is a parameter that specifies the query term to search for.
+
+We are not using the JavaScript client library (however, one does exist!); in this tutorial, we are just making straight GET requests (using jQuery get() method).
+

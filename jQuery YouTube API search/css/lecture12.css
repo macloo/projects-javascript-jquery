@@ -1,0 +1,174 @@
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	}
+
+body {
+	font-family: Verdana, sans-serif;
+	font-size: 100%;
+	color: #000;
+	background: #fff;
+	}
+
+#container {
+	margin: 20px auto;
+	width: 740px;
+	border: 1px solid #999;
+	padding: 20px;
+	background: #F1F7DC;
+	}
+
+section {}
+
+footer { padding-top: 20px; }
+
+clearfloats { clear: both; }
+
+
+/* heading and text styles */
+
+h1, h2 {
+	font-family: Cambria, Georgia, serif;
+	font-size: 200%;
+	font-weight: normal;
+	line-height: 1.4em;
+	}
+
+h2 { font-size: 160%; }
+
+p {
+	margin-bottom: 20px;
+	line-height: 1.4em;
+	}
+
+
+/* links */
+
+a:focus {
+	outline: 2px solid #069;
+	}
+a:link, a:active, a:visited {
+	color: #00c;
+	text-decoration: underline;
+	}
+a:hover {
+	color: #00f;
+	text-decoration: none;
+	}
+
+
+/* search form elements */
+
+#search-form {
+	display: block;
+	margin-bottom: 15px;
+	}
+
+.fieldcontainer {
+	display: block;
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	}
+
+.searchfield {
+	display: block;
+	width: 100%;
+	padding: 11px 7px;
+	padding-right: 43px;
+	background: #fff;
+	color: #333;
+	font-family: monospace;
+	font-size: 140%;
+	border: 1px solid #ccc;
+	}
+
+/* pretty cool trick: inserting the magnifying-glass image as background
+   on the Submit button, then positioning the Submit button inside the  
+   form field! I wonder if this works in IE? */
+
+#searchbutton {
+	position: absolute;
+	top: 7px;
+	right: 10px; /* 360px; */
+	/* container is 740px wide (360px is less than half)
+	   .fieldcontainer is 90% wide with top margin of 0
+	   .searchfield is half that width? (45%) */
+	/* note: tutorial also has a whole animate-the-search-field 
+	   part in jQuery, but I skipped that; it seemed unnecessary 
+	   and just showy */
+	width: 32px;
+	height: 32px;
+	border: 0;
+	cursor: pointer;
+	/* two lines below set opacity for button, not image */
+	filter: alpha(opacity=65);
+	opacity: 0.65;
+	background: transparent url(../images/search.png) top left no-repeat;
+	}
+
+#searchbutton:hover {
+	/* two lines below change button's opacity */
+	filter: alpha(opacity=90);
+	opacity: 0.9;
+	}
+
+
+/* display for search results */
+
+#results li {
+	padding: 10px 0;
+	border-bottom: 1px dashed #ccc;
+	list-style: none;
+	overflow: auto; /* not sure we need this */
+	}
+
+.list-left {
+	float: left;
+	width: 25%;
+	}
+
+.list-left img {
+	width: 100%; /* neat trick; inherits from floated div */
+	padding: 5px;
+	background: #fff; /* photo border */
+	border: 1px solid #ccc;
+	margin-top: 5px;
+	}
+
+.list-right {
+	float: right;
+	width: 70%;
+	}
+
+.list-right p.small {
+	font-size: 90%;
+	margin-bottom: 6px;
+	}
+
+
+/* paging buttons for page bottom */
+
+.button-container {
+	margin-top: 25px;
+	}
+
+.paging-button {
+	background: #00c;
+	color: #fff;
+	font-size: 100%;
+	text-align: center;
+	padding: 10px 20px;
+	cursor: pointer;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	border: 1px solid #666;
+	}
+
+.paging-button:hover {
+	background: #00f;
+	}
