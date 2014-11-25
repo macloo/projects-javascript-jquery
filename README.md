@@ -9,3 +9,4 @@ My files from [a Udemy course](https://www.udemy.com/projects-in-javascript-jque
 
 **jQuery YouTube API search** (Project 3) This is kind of a nightmare. Lots of stuff shown and not explained in the tutorial. I made tons of comments in both my JS and my HTML. Got everything working. Learned a lot about how APIs work! [See it.](http://macloo.github.io/projects-javascript-jquery/jQuery%20YouTube%20API%20search/lecture12.html)
 
+**jQuery accordion** (Project 4) An easy project, but with nice interaction thanks to "toggle." A typical show/hide FAQ design.
