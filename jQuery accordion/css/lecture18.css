@@ -1,0 +1,102 @@
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	}
+
+body {
+	font-family: Verdana, sans-serif;
+	font-size: 100%;
+	color: #000;
+	background: #752E57;
+	}
+
+#container {
+	margin: 20px auto;
+	max-width: 700px;
+	border: 1px solid #999;
+	padding: 20px;
+	background: #DEB6CD;
+	}
+
+#title {
+	background: #333;
+	color: #ccc;
+	padding: 20px;
+	text-align: center;
+	margin-top: 20px;
+	border-bottom: 2px solid #DEB6CD;
+	}
+
+
+/* heading and text styles */
+
+h1, h2 {
+	font-family: Cambria, Georgia, serif;
+	font-size: 200%;
+	font-weight: normal;
+	line-height: 1.4em;
+	}
+
+h2 { font-size: 160%; }
+
+p {
+	margin-bottom: 20px;
+	line-height: 1.4em;
+	}
+
+
+/* DL list styles */
+
+#faq img {
+	margin: 10px 8px 0 8px;
+	vertical-align: bottom;
+	}
+
+dt {
+	font-family: Cambria, Georgia, serif;
+	font-size: 140%;
+	font-weight: bold;
+	background: #5E2044;
+	color: #fff;
+	padding-bottom: 25px;
+	border-top: 2px solid #DEB6CD;
+	border-bottom: 2px solid #DEB6CD;
+	cursor: pointer;
+	}
+
+dd {
+	background: #E3C3D5;
+	padding: 10px;
+	padding-bottom: 20px;
+	line-height: 1.4em;
+	}
+/* in the tutorial he hides the answers with CSS. Bad idea, because 
+   any user lacking JS will never see the answers. */
+
+
+
+/* class to be used by jQuery */
+.rotate {
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	}
+
+
+/* links */
+
+a:focus {
+	outline: 2px solid #069;
+	}
+a:link, a:active, a:visited {
+	color: #00c;
+	text-decoration: underline;
+	}
+a:hover {
+	color: #00f;
+	text-decoration: none;
+	}
+
