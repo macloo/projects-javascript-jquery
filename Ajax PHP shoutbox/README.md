@@ -1,5 +1,7 @@
 #Notes on Project 5: Ajax PHP shoutbox
 
+In this project, I created a new MySQL database on a server, wrote a connection script, submitted a new row to the database via an HTML form, and also wrote to the live page (via jQuery) at the same time. When the page is reloaded, the full contents of the database are written to the page. Whenever the form is submitted, a new row is written to the db.
+
 Downloaded [XAMPP](https://www.apachefriends.org/index.html)
 
 Installed XAMPP - MySQL and PHP and server in one handy DMG. Nice.
@@ -165,5 +167,33 @@ So, final steps:
 * Note it will get them in descending order by ID.
 
 Also in index.php, we write some PHP inside the UL to make the database contents write there.
+
+##TRANSFER the project to Web hosting
+
+I had a new hosting company I haven't used for any databases yet, so I wanted to see if I could make this work there. I did, and it wasn't too hard.
+
+1. Create a new MySQL database. My hosting company has a link just for this, separate from the CPanel. Name the db and create a new user to use it. Add that user to the database. This username and password should be different from the username/pw you use to log in at the hosting company's site. 
+
+2. Find out how to get into **phpMyAdmin** on your hosting service. If they have CPanel, it should be like this:
+
+    - Database Tools &gt;
+    - phpMyAdmin (click to open it)
+    - Log in again with your usual hosting service login and pw
+
+3. Set up the new database -- this is the same as the steps at the beginning of this document. You have to create a table and make your four fieldnames. Make sure all the names are the same as in your original project so your code from the project will work without any changes.
+
+4. **Edit the file database.php.** Remember, this is your connection script, so the PHP has to be changed to match your new db.
+
+     ```
+$conn = mysqli_connect("localhost", "db_username", "db_password", "name_of_MySQL_database");
+```
+
+    You don't change "localhost," but you do change the rest to match the new database you just made.
+
+5. Transfer your files. You can use any FTP program to do this (I like [FIleZilla](https://filezilla-project.org/)). You should use the exact same folder name as in your project, so you can just grab the whole folder and drag it over. Note that most hosting services will be set up to have your Web pages inside a folder named `public_html` that's already set up by them.
+
+![Illustration: Host FTP 1](http://macloo.github.io/projects-javascript-jquery/Ajax%20PHP%20shoutbox/images/host_upload1.png)
+
+![Illustration: Host FTP 2](http://macloo.github.io/projects-javascript-jquery/Ajax%20PHP%20shoutbox/images/host_upload2.png)
 
 (end)
