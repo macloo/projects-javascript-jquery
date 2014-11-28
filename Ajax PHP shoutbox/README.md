@@ -31,16 +31,16 @@ His HTDOCS has a million things in it; mine has very few.
     - Number of columns: 4
     - &gt; Go
 
-7. Create ID field - integer - 11 (he says he likes 11, doesn't say why) - and 
+7. Create id field - INT - 11 (he says he likes 11, doesn't say why) - and 
    Index: make it the PRIMARY field (scroll to the right, find **Index**) 
 
 8. Check box immediately following Index (**A_I**): this is auto-increment, will add new row after each insertion.
 
-9. Fill other fieldnames: name, shout, date
+9. Fill other fieldnames: name (VARCHAR), shout (VARCHAR), date (TEXT)
 
     - Note: For date, he's not using the date options provided, so he selects TEXT as the type. 
    
-    None of these have an Index selected.
+    None of these have an Index selected. Add char limits for each one.
 
 10. SAVE the table. 
 
