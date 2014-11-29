@@ -1,0 +1,127 @@
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	}
+
+body {
+	font-family: Verdana, sans-serif;
+	font-size: 100%;
+	color: #000;
+	background: #999;
+	}
+
+#container {
+	margin: 20px auto;
+	background: #fff;
+	width: 1000px;
+	border: 1px solid #999;
+	padding: 20px;
+	position: relative;
+	}
+
+/* heading and text styles */
+
+h1, h2 {
+	font-family: Cambria, Georgia, serif;
+	font-size: 200%;
+	font-weight: normal;
+	line-height: 1.4em;
+	}
+
+h2 { font-size: 160%; }
+
+p {
+	margin-bottom: 20px;
+	line-height: 1.4em;
+	}
+
+p.under {
+	margin: 0 auto;
+	padding: 20px 0;
+	width: 900px;
+	}
+
+/* thumbnail slider styles */
+
+#slider {
+	margin: 10px auto;
+	width: 900px;
+	
+	-moz-box-shadow: 0 0 10px #999;
+	-webkit-box-shadow: 0 0 10px #999;
+	box-shadow: 0 0 10px #999;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	/* junk above for cute box visual effect */
+	
+	/* below he makes a bg just for the thumbnails by using 
+	   only repeat-x and pushing it to the bottom of this div */
+	background: url(../images/panel.jpg) repeat-x bottom center #fff;
+	overflow: hidden;
+	}
+
+#slides {
+	display: block;
+	width: 900px;
+	height: 200px;
+	margin: 25px 0;
+	overflow: hidden;
+	}
+
+.slide {
+	float: left !important;
+	}
+
+#thumbs {
+	height: 45px;
+	}
+
+#thumbs ul {
+	list-style: none;
+	width: 176px; /* 44 x 4 = 176 */
+	margin: 0 auto; /* center this div */
+	}
+
+#thumbs li {
+	display: inline-block;
+	height: 45px;
+	list-style: none;
+	/* the images in these LIs are all 24x24 */
+	/* note the weird bumping-together of LI tags in the HTML 
+	   to compensate for inline-block behavior */
+	}
+
+#thumbs li img {
+	display: block;
+	margin: 0 10px; /* 10 px on each side +24 = 44 */
+	margin-top: 10px;
+	border: 0;
+	}
+
+#thumbs li {
+	cursor: pointer;
+	}
+
+#thumbs li.active, #thumbs li.active:hover {
+	/* .active class will be added with jQuery */ 
+	background: url(../images/active_bg.png) no-repeat;
+	}
+
+/* links */
+
+a:focus {
+	outline: 2px solid #069;
+	}
+a:link, a:active, a:visited {
+	color: #00c;
+	text-decoration: underline;
+	}
+a:hover {
+	color: #00f;
+	text-decoration: none;
+	}
+
