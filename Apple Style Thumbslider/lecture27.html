@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lecture 27 Image thumbslider</title>
+<link rel="stylesheet" href="css/lecture27.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+<script src="scripts/lecture27.js"></script>
+</head>
+
+<body>
+<div id="container">
+<header>
+	<h1>jQuery Thumbslider (modified)</h1>
+	<p>A thumbnail menu below displays large images in the main window. 
+	   Horizontal sliding action.</p>
+</header>
+
+<div id="slider">
+	<!-- instructor had each img wrapped in a div - not nec. 
+	     Just put class in the img and set imgs to display:block -->
+	<div id="slides">
+	<img class="slide" src="images/slides/device-imac.png" width="900" height="200">
+	<img class="slide" src="images/slides/device-macbook.png" width="900" height="200">
+	<img class="slide" src="images/slides/device-ipad.png" width="900" height="200">
+	<img class="slide" src="images/slides/device-iphone.png" width="900" height="200">
+</div>
+
+	<!-- instructor wants to use HTML5 menu selector, but this is not a 
+	     real menu, so I'm using a div. Also, he wraps the img in an a href. 
+	     This also seems un-semantic to me. And not nec. -->
+	<div id="thumbs">
+	<ul>
+		<li>
+		<img src="images/slides/device-imac-thumb.png" width="24" height="24">
+		</li><li>
+		<img src="images/slides/device-macbook-thumb.png" width="24" height="24">
+		</li><li>
+		<img src="images/slides/device-ipad-thumb.png" width="24" height="24">
+		</li><li>
+		<img src="images/slides/device-iphone-thumb.png" width="24" height="24">
+		</li>
+		<!-- note the weird bumping-together of LI tags in the HTML 
+	         to compensate for inline-block behavior --> 
+	</ul>
+	</div>
+
+</div>
+
+<p class="under">The autoplay function on this took me a while to figure out. It was not well explained in the tutorial. But it's pretty cool. Once you click any thumbnail, the autoplay quits, and I have not included a means to restart it. I changed a lot of the CSS in the tutorial and really simplified the HTML a lot (took out a lot of DIVs), so I don't know if this will break in browsers other than mine.</p>
+
+</div>
+</body>
+</html>
